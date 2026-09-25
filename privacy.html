@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="data:," />
 <title>One Line Journaling — Privacy Policy</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, system-ui, Segoe UI, Roboto, sans-serif; line-height: 1.6;
          max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; color: #1a1a1a; background: #fff; }
   @media (prefers-color-scheme: dark) { body { color: #e9e9ea; background: #0b0b11; } a { color: #e7b15a; } }
+  nav { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 36px; }
   h1 { font-size: 28px; margin-bottom: 4px; }
   h2 { font-size: 18px; margin-top: 32px; }
   .meta { color: #888; font-size: 14px; margin-bottom: 24px; }
@@ -16,45 +18,48 @@
 </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <!-- Keep this date aligned with the exact public one-line-legal/privacy.html publish. -->
-  <p class="meta">One Line Journaling · Effective 30 August 2026</p>
-
+  <nav aria-label="Legal and support"><a href="index.html">Home</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+  <h1>One Line Journaling — Privacy Policy</h1>
+  <p class="meta">Effective 25 September 2026</p>
   <p>One Line Journaling is a private journal. This page says, in plain words, what we keep and what we will never do with it.</p>
 
-  <h2>What we store</h2>
-  <p>Your email address (to sign you in), your first name, your settings (like your daily reminder), and your journal, one line and one color per day.</p>
+  <h2>Account data One Line stores</h2>
+  <p>Supabase stores your email address, first name, account settings, random account and session IDs, one-phone security records, and deletion records. We use them to sign you in, restore your settings, keep one active phone, protect the service, and delete your account.</p>
+  <p>This user-owned release does not send new sentences, drafts, searches, or journal colors to Supabase. The active account database no longer stores journal entries. Some older encrypted database recovery copies still held by One Line contain earlier journal content. The first account-only replacement backup has passed verification, but these older archives remain pending separate reviewed deletion.</p>
 
-  <h2>Usage counts</h2>
-  <p>To decide what to improve, we may count which parts of the app get used, like how often sharing or search is opened. A count is only the button’s name, your account, and the time. It never includes your words or anything you typed. These counts are linked to your account only so they can be erased with it. They are never sold, never shared, and never used for ads.</p>
+  <h2>Your journal stays under your control</h2>
+  <p>The authoritative journal lives in an encrypted SQLCipher database on your active phone.</p>
+  <p>Google Drive recovery is optional. If you connect it from Settings, One Line keeps a recovery package in the chosen Google account's hidden app data folder. Without Google Drive or a usable encrypted backup saved elsewhere, losing this phone could mean losing your journal.</p>
+  <p>That package contains an encrypted journal archive and the high-entropy key needed to open it. One Line and Supabase do not receive either value. Access to the chosen Google account is enough to restore the journal, so someone who gains that Google account and its hidden app data could also recover it.</p>
 
-  <h2>Where it lives</h2>
-  <p>One Line’s primary account and journal database is hosted by Supabase in the United States (Northern Virginia). If you use One Line outside the United States, your account and journal data are transferred to and processed in the United States.</p>
-  <p>Your journal is protected in transit and at rest with industry-standard encryption. Server access rules mean your account can only ever read its own lines.</p>
-  <p>Your phone also keeps its own offline copy of your journal, so the app works without a connection.</p>
+  <h2>Google Drive access</h2>
+  <p>One Line asks Google only for permission to use its own hidden app data folder. It cannot read any other file in your Drive. The app reads the chosen Google account's email address and stable Google user ID on your phone only to keep the journal linked to the same Drive account; it does not send them to Supabase.</p>
+  <p>The recovery package is hidden from the normal Drive file list and from other Drive apps. Deleting your One Line account leaves it in your Google account. You control it and can delete it from Google Drive settings under Manage apps.</p>
 
-  <h2>What we will never do</h2>
-  <p>We don’t sell your data. We don’t show ads. We don’t use advertising trackers or ad companies. Your words are yours.</p>
+  <h2>Usage data</h2>
+  <p>One Line does not currently send product analytics, button counts, search history, crash reports, or performance telemetry. If that changes, we will update this policy and the store disclosure before collection begins.</p>
+  <p>We don't sell your data, show ads, use advertising trackers, or train a model on your journal.</p>
 
   <h2>Technical connection details</h2>
-  <p>Supabase receives basic connection details when One Line signs you in or syncs, such as your IP address, country, and the Supabase software library version.</p>
+  <p>Supabase receives basic connection details when One Line signs you in or uses account services, such as your IP address, country, and the Supabase software library version.</p>
   <p>Supabase uses its connection and sign-in logs to protect accounts and enforce rate limits. These are required service records, not advertising. One Line does not intentionally put your journal words into connection or sign-in logs.</p>
 
   <h2>Email, no spam ever</h2>
-  <p>The only emails we send are your 6-digit sign-in code and replies when you contact us, including a confirmation exchange before we act on an emailed account request. If you email us about your account, we keep that correspondence and our notes about the request for up to 90 days after it’s resolved, then delete them. No newsletters, no marketing. If something important changes (like this policy), we’ll tell you inside the app.</p>
+  <p>The only emails we send are your 6-digit sign-in code and replies when you contact us, including a confirmation exchange before we act on an emailed account request. If you email us about your account, we keep that correspondence and our notes about the request for up to 90 days after it is resolved, then delete them. No newsletters, no marketing. If something important changes, we will tell you inside the app.</p>
 
   <h2>Reminders &amp; sharing</h2>
-  <p>The daily reminder is scheduled on your phone itself, not sent from our servers. Share images are created on your phone and handed to your device’s share sheet; we never see or store what you share.</p>
+  <p>The daily reminder is scheduled on your phone itself, not sent from our servers.</p>
+  <p>Share images are created on your phone and handed to the iOS or Android share sheet. We never see or store what you share.</p>
 
   <h2 id="delete">Deleting your account &amp; data</h2>
-  <p>In the app: Settings → Delete account &amp; data starts permanent deletion. When the server confirms it, your account, your profile, and every line are erased from our database, and the offline copy is removed from this phone. If this phone loses the server’s final answer, One Line locks the journal and keeps a small encrypted cleanup record on this phone until it can safely confirm whether deletion finished. That temporary record may contain your account’s random ID and sign-in email, and it is removed when cleanup is proven. Ordinary offline journaling is not locked. If you also installed One Line on another phone, opening that app online lets it learn about the deletion and clear its offline copy; uninstalling the app also clears that phone’s copy.</p>
-  <!-- G5: shared verbatim with the in-app page and pinned by gate 4. Normal pruning is two weeks;
-       the newest verified recovery copy is retained and the exception is disclosed. -->
-  <p>One honest detail: we also keep encrypted recovery copies of the journal database and persistent account and sign-in records, so a disaster has a recovery point instead of destroying the whole database. A deleted account can normally remain inside those recovery copies for up to two weeks. If making new copies stops, we keep the last recovery copy until a replacement is safely stored, so in that exceptional case it can be older than two weeks. We authenticate and open a copy only to verify that it works, run a controlled recovery test, or recover from a real failure. Automatic recovery builds a separate empty project; it does not overwrite the live database in place.</p>
-  <p>Already deleted the app? You can still have your account erased, no need to reinstall. Email us at <a href="mailto:onelinejournaling@gmail.com">onelinejournaling@gmail.com</a> from your account’s email address and we’ll permanently erase your account and every line from our database within 30 days.</p>
-  <p>None of this contains an email, a name, or journal content. What remains after you delete is one small marker, so your other phones know to clear their own offline copies. The marker holds the account’s random ID, the time of deletion, and a scrambled check code from each phone that set one up. It answers that check for 60 days and is removed after that window. While you use the app, each signed-in phone keeps one check code, and our server keeps a scrambled form of it with your account’s random ID and the time it was registered. The server’s scrambled copy lives only as long as the account, or inside the marker for its 60 days; the code on a phone stays until that phone finishes its cleanup or the app is removed. While the account exists, a signed-in phone with an internet connection can hand its code back. A phone that is offline, stays unopened past the 60 days, or whose codes were reset by our support and not registered again before the deletion will not notice it; its offline copy then remains until the app is removed there.</p>
-  
-  <p>Current provider details: Supabase Free gives us about one day of security and service logs and says it may maintain up to seven daily platform backup copies that become available if we upgrade. Brevo keeps sign-in delivery logs for one month, anonymizes future open/click events, and never stores the email-content preview. For account-support cases we use Gmail for the thread, a private Google Drive case file, and Google Calendar for the case reminders. On or before the case’s delete-by date (no later than 90 days after resolution), we permanently delete each individual thread, file, and reminder and do not leave those items in our trash. These providers may still retain limited security, legal, disaster-recovery, or anonymized information under their own policies.</p>
+  <p>Settings → Delete account &amp; data starts permanent deletion. When the server confirms it, One Line erases your account, profile, settings, sessions, and security records from our active database. The encrypted journal database, its protected local key, and the Drive connection are then removed from the active phone.</p>
+  <p>Deleting your One Line account does not delete the recovery package in your Google Drive. That package belongs to your Google account and is kept so you can control it independently. To erase it, open Google Drive settings, choose Manage apps, find One Line Journaling, and use Options → Delete hidden app data.</p>
+  <p>If the phone loses the server’s final answer, One Line locks the journal and keeps a small encrypted cleanup record until it can confirm whether deletion finished. The record may contain the account’s random ID and sign-in email, and is removed when cleanup is proven.</p>
+  <p>The app supports one active journal phone. Approving a sign-in on a replacement phone removes the previous phone's server authority before the replacement restores its journal. A previous phone that stays offline cannot be remotely stopped or erased. When it next connects, it cannot update the Drive backup; its encrypted local copy remains until the app is removed or account-deletion cleanup finishes on that phone.</p>
+  <p>If you already deleted the app, email <a href="mailto:onelinejournaling@gmail.com">onelinejournaling@gmail.com</a> from the account email. We will erase the One Line account and server data within 30 days. We cannot delete the recovery package inside your Google Drive account.</p>
+  <p>Our database recovery copies contain account and sign-in records. Copies created before your journal moved to this phone-and-Drive design may also contain older journal content. Our normal cleanup keeps the newest recovery copy and may keep an earlier copy for two weeks or longer when delivery cannot be confirmed. Automatic pruning is currently paused during this review, so we cannot promise a two-week deletion date. Some older journal-bearing backup copies still exist beyond two weeks pending separate reviewed deletion. If new copies stop, the last verified recovery copy may be kept longer until a replacement is safely stored. Provider-held historical disaster-recovery copies may persist under separate retention practices even after we remove our own archives.</p>
+  <p>After account deletion, one word-free marker may remain for 60 days. It contains the random account ID, deletion time, and a scrambled cleanup verifier so a previously active installation can learn that the account was deleted. It contains no email, name, recovery code, or journal content.</p>
+  <p>Current provider details: Supabase processes account hosting, authentication, security logs, and account recovery copies in the United States. Brevo processes sign-in email and keeps delivery logs for one month. Google Drive stores the recovery package under the Google account you choose. For account-support cases we use Gmail for the thread, a private Google Drive case file, and Google Calendar for reminders. On or before the case’s delete-by date, no later than 90 days after resolution, we permanently delete each thread, case file, and reminder from our accounts. These providers may still retain limited security, legal, disaster-recovery, or anonymized information under their own policies.</p>
 
   <h2>Children</h2>
   <p>One Line Journaling is not directed to children under 13, and we do not knowingly collect data from them.</p>
@@ -62,6 +67,6 @@
   <h2>Contact</h2>
   <p>Questions about your privacy? Email <a href="mailto:onelinejournaling@gmail.com">onelinejournaling@gmail.com</a>.</p>
 
-  <p class="foot">If our practices change, we’ll update this page and the effective date above.</p>
+  <p class="foot">If our practices change, we will update this page and the effective date above.<br /><a href="index.html">Home</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></p>
 </body>
 </html>

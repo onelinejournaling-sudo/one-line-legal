@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="One Line Journaling is a private daily journal for one sentence and one color." />
+  <link rel="icon" href="data:," />
+  <title>One Line Journaling</title>
+  <style>
+    :root { color-scheme: dark; --bg: #161826; --card: #2c2f40; --ink: #f4f1eb; --dim: #b8b7bd; --accent: #f2913d; --line: #45495f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    a { color: var(--accent); }
+    header, main, footer { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; }
+    .brand { color: var(--ink); font-weight: 700; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: var(--dim); text-decoration: none; }
+    nav a:focus-visible, nav a:hover { color: var(--accent); }
+    main { padding: 72px 0 64px; }
+    .mark { color: var(--accent); font-family: Georgia, serif; font-size: 64px; line-height: 1; margin: 0 0 20px; }
+    h1 { max-width: 660px; margin: 0; font-family: Georgia, serif; font-size: clamp(42px, 8vw, 72px); font-weight: 500; line-height: 1.04; }
+    .lede { max-width: 620px; margin: 24px 0 48px; color: var(--dim); font-size: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    section { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+    h2 { margin: 0 0 10px; font-size: 18px; }
+    p { margin: 0; }
+    section p { color: var(--dim); }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--dim); font-size: 14px; }
+    @media (max-width: 620px) { header { align-items: flex-start; flex-direction: column; } main { padding-top: 40px; } .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">One Line Journaling</a>
+    <nav aria-label="Legal and support">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+  <main>
+    <p class="mark" aria-hidden="true">1</p>
+    <h1>One sentence. One color. One day at a time.</h1>
+    <p class="lede">One Line is a quiet daily journal for people who do not want to write a page. Your journal stays encrypted on your active phone, with optional replacement-phone recovery through your own hidden Google Drive folder.</p>
+    <div class="grid">
+      <section>
+        <h2>Your journal belongs to you</h2>
+        <p>One Line does not use your writing for ads or model training. One Line and Supabase do not receive your hidden Google Drive recovery package.</p>
+      </section>
+      <section>
+        <h2>One active journal phone</h2>
+        <p>Connect Google Drive from Settings when you want replacement-phone recovery. The same Google account can restore the journal without a separate code. Journals are not synced or merged across phones.</p>
+      </section>
+      <section>
+        <h2>Simple by design</h2>
+        <p>Write one short sentence, choose one color, and revisit your days by day, month, or year.</p>
+      </section>
+      <section>
+        <h2>Need help?</h2>
+        <p>Read the <a href="support.html">support page</a> or email <a href="mailto:onelinejournaling@gmail.com">onelinejournaling@gmail.com</a>.</p>
+      </section>
+    </div>
+  </main>
+  <footer>One Line Journaling · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></footer>
+</body>
+</html>

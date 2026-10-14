@@ -24,25 +24,25 @@
   <p>One Line Journaling is a private journal. This page says, in plain words, what we keep and what we will never do with it.</p>
 
   <h2>Account data One Line stores</h2>
-  <p>Supabase stores your email address, first name, account settings, random account and session IDs, one-phone security records, and deletion records. We use them to sign you in, restore your settings, keep one active phone, protect the service, and delete your account.</p>
+  <p>Supabase stores your email address, name, account settings, random account and session IDs, one-phone security records, and deletion records. We use them to sign you in, restore your settings, keep one active phone, protect the service, and delete your account.</p>
   <p>One Line does not send sentences, drafts, searches, or journal colors to Supabase. The account database and its recovery copies contain account data, not journal entries. We cannot certify erasure of provider-held trash, file versions, or disaster-recovery copies.</p>
 
   <h2>Your journal stays under your control</h2>
-  <p>The authoritative journal lives in an encrypted SQLCipher database on your active phone.</p>
-  <p>Connect Google Drive from Settings to keep a recovery package in the chosen Google account's hidden app data folder. If you lose this phone before its latest writing reaches Google Drive, you may lose that writing. Without Google Drive recovery, you may lose the whole journal.</p>
-  <p>That package contains an encrypted journal archive and the high-entropy key needed to open it. One Line’s servers and Supabase do not receive either value. Access to the chosen Google account is enough to restore the journal, so someone who gains that Google account and its hidden app data could also recover it. The original One Line sign-in account is not required for recovery into an empty journal.</p>
+  <p>Your writing is saved on this phone in an encrypted database. The app encrypts it automatically using a key kept in the phone’s protected storage; you do not choose an encryption password.</p>
+  <p>Turn on Google Drive backup in Settings to save a recovery file in the Google account you choose. It is hidden from the normal Drive file list. If you lose the phone before new writing is backed up, that writing may be lost. With backup off, losing the phone may mean losing the whole journal.</p>
+  <p>The recovery file contains your encrypted journal and the key that opens it. The app sends this file directly to your chosen Google account, without uploading it to One Line’s servers or Supabase. To recover on a new phone, sign in to One Line and connect that same Google account. Anyone who can connect that Google account to One Line can recover its backup into an empty journal, even with a different One Line sign-in email. No separate recovery code is required.</p>
 
   <h2 id="drive-backup">Google Drive access</h2>
   <p>The app asks Google only for permission to use its own hidden app data folder. It cannot read any other file in your Drive. The app reads the chosen Google account's email address and stable Google user ID on your phone only to keep the journal linked to the same Drive account; it does not send them to Supabase.</p>
   <p>The recovery package is hidden from the normal Drive file list and from other Drive apps. Switching off Google Drive backup in Settings stops backup, deletes this journal’s recovery package from that Google account, and removes One Line’s Google authorization. This may disconnect One Line’s Drive access on other phones using that Google account; your writing stays on the phone and your One Line email login stays signed in. Deletion or access removal that is not confirmed stays unfinished and can be retried in Settings. You can also delete the recovery package from Google Drive settings under Manage apps.</p>
 
   <h2>Usage data</h2>
-  <p>Once a day, the app sends a small count for the day before: that it was opened, whether a line was saved, whether Google Drive backup was on, and the phone type (Android or iOS). The counts are stored without your account ID and never include your writing, email or the time of day. This is on by default; you can turn it off in Settings → Share usage totals, which also deletes anything not yet sent. We do not send crash reports or performance telemetry.</p>
+  <p>Once a day, the app sends a small count for the day before: that it was opened, whether a line was saved, whether Google Drive backup was on, and the phone type (Android or iOS). The counts are stored without your account ID and never include your writing, email or the time of day. This is on by default; you can turn it off in Settings → Share usage totals, which also deletes anything not yet sent. We do not send crash reports or performance telemetry. We do not count the colours you choose, which screens or buttons you use, or whether you share.</p>
   <p>We don't sell your data, show ads, use advertising trackers, or train a model on your journal.</p>
 
   <h2>Technical connection details</h2>
   <p>Supabase receives basic connection details when One Line signs you in or uses account services, such as your IP address, country, and the Supabase software library version.</p>
-  <p>Supabase uses its connection and sign-in logs to protect accounts and enforce rate limits. These are required service records, not advertising. One Line does not intentionally put your journal words into connection or sign-in logs.</p>
+  <p>Supabase keeps connection and sign-in logs to protect accounts and limit repeated requests. The app does not send your journal entries with connection or sign-in requests.</p>
 
   <h2>Email, no spam ever</h2>
   <p>The only emails we send are your 6-digit sign-in code and replies when you contact us, including a confirmation exchange before we act on an emailed account request. If you email us about your account, we keep that correspondence and our notes about the request for up to 90 days after it is resolved, then delete them. No newsletters, no marketing. If something important changes, we will tell you inside the app.</p>
@@ -67,6 +67,7 @@
   <h2>Contact</h2>
   <p>Questions about your privacy? Email <a href="mailto:onelinejournaling+support@gmail.com">onelinejournaling+support@gmail.com</a>.</p>
 
+  <p>If the email link does not open a mail app, copy <strong>onelinejournaling+support@gmail.com</strong> or <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=onelinejournaling%2Bsupport%40gmail.com" target="_blank" rel="noopener noreferrer">write to support in Gmail</a>.</p>
   <p class="foot">If our practices change, we will update this page and the effective date above.<br /><a href="index.html">Home</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></p>
 </body>
 </html>

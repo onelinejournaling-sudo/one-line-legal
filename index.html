@@ -26,6 +26,8 @@
     h2 { margin: 0 0 10px; font-size: 18px; }
     p { margin: 0; }
     section p { color: var(--dim); }
+    section p + p { margin-top: 12px; }
+    section a, section strong { overflow-wrap: anywhere; }
     footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--dim); font-size: 14px; }
     @media (max-width: 620px) { header { align-items: flex-start; flex-direction: column; } main { padding-top: 40px; } .grid { grid-template-columns: 1fr; } }
   </style>
@@ -59,10 +61,10 @@
       <section>
         <h2>Need help?</h2>
         <p>Read the <a href="support.html">support page</a> or email <a href="mailto:onelinejournaling+support@gmail.com">onelinejournaling+support@gmail.com</a>.</p>
+        <p class="support-fallback">If the email link does not open a mail app, copy <strong>onelinejournaling+support@gmail.com</strong> or <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=onelinejournaling%2Bsupport%40gmail.com" target="_blank" rel="noopener noreferrer">write to support in Gmail</a>.</p>
       </section>
     </div>
   </main>
-  <p>If the email link does not open a mail app, copy <strong>onelinejournaling+support@gmail.com</strong> or <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=onelinejournaling%2Bsupport%40gmail.com" target="_blank" rel="noopener noreferrer">write to support in Gmail</a>.</p>
   <footer>One Line Journaling · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></footer>
 </body>
 </html>
